@@ -19,5 +19,16 @@ Build/
 
 # Ignore everything inside Content, except specific folders
 Content/*
-Windows/Bloodforged/Content/Paks/Bloodforged-Windows.ucas
-!Content/Bloodforged/AbilitySystem/
+!Content/Bloodforged/
+
+# Further ignore specific subfolders/files in Content/Bloodforged
+Content/MetaHumans/
+Content/YI_NPC/
+Content/StarterContent/
+Content/HealthPotionPack/
+Content/AncientContent/
+Content/Audio/
+Content/Characters/
+Content/Skeleton
+
+# Add additional specific ignores or allows here if needed

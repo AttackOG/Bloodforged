@@ -1,0 +1,23 @@
+# Unreal Engine Folders to Ignore
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# Code and IDE Specific Files
+.vscode/
+.vs/
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+
+# Ignore everything inside Content, except specific folders
+Content/*
+Windows/Bloodforged/Content/Paks/Bloodforged-Windows.ucas
+!Content/Bloodforged/AbilitySystem/

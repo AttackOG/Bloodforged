@@ -32,3 +32,5 @@ Content/Characters/
 Content/Skeleton
 
 # Add additional specific ignores or allows here if needed
+Content/Bloodforged/Characters/
+Content/Bloodforged/Art/

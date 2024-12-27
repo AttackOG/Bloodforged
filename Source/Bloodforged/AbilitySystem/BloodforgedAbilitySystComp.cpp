@@ -5,10 +5,10 @@
 
 void UBloodforgedAbilitySystComp::AbilityActorInfoSet()
 {
-	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UBloodforgedAbilitySystComp::EffectApplied);
+	OnGameplayEffectAppliedDelegateToSelf.AddUObject(this, &UBloodforgedAbilitySystComp::ClientEffectApplied);
 }
 
-void UBloodforgedAbilitySystComp::EffectApplied(UAbilitySystemComponent* AbilitySystemComponent,
+void UBloodforgedAbilitySystComp::ClientEffectApplied_Implementation(UAbilitySystemComponent* AbilitySystemComponent,
                                                 const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle)
 {
 	FGameplayTagContainer TagContainer;

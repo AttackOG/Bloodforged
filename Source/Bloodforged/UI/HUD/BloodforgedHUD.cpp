@@ -2,6 +2,8 @@
 
 
 #include "BloodforgedHUD.h"
+
+#include "Bloodforged/UI/WidgetController/AttributeMenuWidgetController.h"
 #include "Bloodforged/UI/WidgetController/OverlayWidgetController.h"
 #include "Blueprint/UserWidget.h"
 
@@ -12,10 +14,20 @@ UOverlayWidgetController* ABloodforgedHUD::GetOverlayWidgetController(const FWid
 		OverlayWidgetController = NewObject<UOverlayWidgetController>(this, OverlayWidgetControllerClass);
 		OverlayWidgetController->SetWidgetControllerParams(WidgetControllerParams);
 		OverlayWidgetController->BindCallbacksToDependencies();
-
-		return OverlayWidgetController;
 	}
 	return OverlayWidgetController;
+}
+
+UAttributeMenuWidgetController* ABloodforgedHUD::GetAttributeMenuWidgetController(
+	const FWidgetControllerParams& WidgetControllerParams)
+{
+	if (AttributeMenuWidgetController == nullptr)
+	{
+		AttributeMenuWidgetController = NewObject<UAttributeMenuWidgetController>(this, AttributeMenuWidgetControllerClass);
+		AttributeMenuWidgetController->SetWidgetControllerParams(WidgetControllerParams);
+		AttributeMenuWidgetController->BindCallbacksToDependencies();
+	}
+	return AttributeMenuWidgetController;
 }
 
 void ABloodforgedHUD::InitOverlay(APlayerController* PC, APlayerState* PS, UAbilitySystemComponent* ASC, UAttributeSet* AS)

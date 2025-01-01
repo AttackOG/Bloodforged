@@ -4,11 +4,44 @@
 #include "BloodforgedAttributeSet.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "GameplayEffectExtension.h"
+#include "Bloodforged/BloodforgedGameplayTags.h"
 #include "GameFramework/Character.h"
 #include "Net/UnrealNetwork.h"
 
 UBloodforgedAttributeSet::UBloodforgedAttributeSet()
 {
+	const FBloodforgedGameplayTags& GameplayTags = FBloodforgedGameplayTags::Get();
+
+	// Primary Attributes
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Strength, GetStrengthAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Intelligence, GetIntelligenceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Resilience, GetResilienceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Vigor, GetVigorAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Dexterity, GetDexterityAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Wisdom, GetWisdomAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Endurance, GetEnduranceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Primary_Luck, GetLuckAttribute);
+
+	// Secondary Attributes
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_MaxHealth, GetMaxHealthAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_MaxMana, GetMaxManaAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_MaxStamina, GetMaxStaminaAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_PhysicalAttackPower, GetPhysicalAttackPowerAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_MagicalAttackPower, GetMagicalAttackPowerAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_CriticalHitChance, GetCriticalHitChanceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_CriticalHitDamage, GetCriticalHitDamageAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_PhysicalDefence, GetPhysicalDefenceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_MagicalDefence, GetMagicalDefenceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_AttackSpeed, GetAttackSpeedAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_DodgeChance, GetDodgeChanceAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_HealthRegenRate, GetHealthRegenerationRateAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_ManaRegenRate, GetManaRegenerationRateAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_StaminaRegenRate, GetStaminaRegenerationRateAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_ArmorPenetration, GetArmorPenetrationAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_WeaponAccuracy, GetWeaponAccuracyAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_LootQualityModifier, GetLootQualityAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_CooldownReduction, GetCooldownReductionAttribute);
+	TagsToAttributes.Add(GameplayTags.Attributes_Secondary_BlockStrength, GetBlockStrengthAttribute);
 }
 
 void UBloodforgedAttributeSet::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const

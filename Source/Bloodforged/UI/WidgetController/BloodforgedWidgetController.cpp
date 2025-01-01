@@ -14,6 +14,7 @@ void UBloodforgedWidgetController::SetWidgetControllerParams(const FWidgetContro
 void UBloodforgedWidgetController::BroadcastInitialValues()
 {
 	// Being overrided by child class OverlayWidgetController.
+	// Also being called inside WBP_AttributeMenu
 }
 
 void UBloodforgedWidgetController::BindCallbacksToDependencies()

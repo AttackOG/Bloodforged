@@ -21,7 +21,6 @@ void ABloodforgedPlayerController::SetupInputComponent()
 	UEnhancedInputComponent* EnhancedInput = CastChecked<UEnhancedInputComponent>(InputComponent);
 	
 	EnhancedInput->BindAction(InputPickupAction, ETriggerEvent::Triggered, this, &ABloodforgedPlayerController::InputPickupPressed);
-
 }
 
 void ABloodforgedPlayerController::InputPickupPressed()

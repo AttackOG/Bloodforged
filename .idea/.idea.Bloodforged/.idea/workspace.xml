@@ -75,21 +75,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ Project.Bloodforged.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ Project.Bloodforged.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C/C++ Project.Bloodforged">
     <configuration name="Bloodforged" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -227,6 +227,13 @@
       <workItem from="1734983439027" duration="2481000" />
       <workItem from="1735041475126" duration="8047000" />
       <workItem from="1735086501820" duration="2798000" />
+      <workItem from="1735320203217" duration="4141000" />
+      <workItem from="1735378679246" duration="12960000" />
+      <workItem from="1735502708091" duration="2540000" />
+      <workItem from="1735576829656" duration="6160000" />
+      <workItem from="1735728630412" duration="15299000" />
+      <workItem from="1735753015624" duration="6618000" />
+      <workItem from="1735767412314" duration="1347000" />
     </task>
     <task id="LOCAL-00001" summary="Secondary attributes added.">
       <option name="closed" value="true" />

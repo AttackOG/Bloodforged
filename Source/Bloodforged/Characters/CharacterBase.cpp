@@ -4,6 +4,7 @@
 #include "CharacterBase.h"
 
 #include "AbilitySystemComponent.h"
+#include "Bloodforged/AbilitySystem/BloodforgedAbilitySystComp.h"
 
 ACharacterBase::ACharacterBase()
 {
@@ -31,6 +32,15 @@ void ACharacterBase::InitializeDefaultAttributes() const
 	ApplyEffectToSelf(DefaultPrimaryAttributes, 1.f);
 	ApplyEffectToSelf(DefaultSecondaryAttributes, 1.f);
 	ApplyEffectToSelf(DefaultVitalAttributes, 1.f);
+}
+
+void ACharacterBase::AddCharacterAbilities() const
+{
+	UBloodforgedAbilitySystComp* BloodforgedAbilitySystemComponent = Cast<UBloodforgedAbilitySystComp>(AbilitySystemComponent);
+	if (!HasAuthority()) return;
+
+	BloodforgedAbilitySystemComponent->GiveStartupAbilities(StartupAbilities);
+	
 }
 
 UAbilitySystemComponent* ACharacterBase::GetAbilitySystemComponent() const

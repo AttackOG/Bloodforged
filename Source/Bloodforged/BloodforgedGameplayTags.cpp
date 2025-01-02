@@ -44,4 +44,12 @@ void FBloodforgedGameplayTags::InitializeNativeGameplayTags()
 	GameplayTags.Attributes_Vital_Health = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Health"), FString("Represents the maximum health pool of a character, determining how much damage they can take before dying. Scaled primarily by Vigor, with minor contributions from Resilience and Endurance."));
 	GameplayTags.Attributes_Vital_Mana = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Mana"), FString("Represents the maximum mana pool, determining the ability to cast spells or use magical abilities. Scaled primarily by Intelligence, with minor contributions from Wisdom."));
 	GameplayTags.Attributes_Vital_Stamina = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Attributes.Vital.Stamina"), FString("Represents the maximum stamina pool, determining the ability to perform actions like running, dodging, or special moves. Scaled primarily by Endurance, with minor contributions from Dexterity and Vigor."));
+
+	// Input Tags
+	GameplayTags.InputTag_LMB = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.LMB"), FString("Input tag for left click mouse button."));
+	GameplayTags.InputTag_RMB = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.RMB"), FString("Input tag for right click mouse button."));
+	GameplayTags.InputTag_1 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.1"), FString("Input tag for 1 key."));
+	GameplayTags.InputTag_2 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.2"), FString("Input tag for 2 key."));
+	GameplayTags.InputTag_3 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.3"), FString("Input tag for 3 key."));
+	GameplayTags.InputTag_4 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.4"), FString("Input tag for 4 key."));
 }

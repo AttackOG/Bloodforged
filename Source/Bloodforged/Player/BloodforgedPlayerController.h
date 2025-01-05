@@ -3,9 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "GameFramework/PlayerController.h"
 #include "BloodforgedPlayerController.generated.h"
 
+class UBloodforgedAbilitySystComp;
+class UBloodforgedInputConfig;
 class UInputAction;
 class UInputMappingContext;
 
@@ -33,5 +36,17 @@ private:
 	TObjectPtr<UInputAction> InputPickupAction;
 	
 	void InputPickupPressed();
-	
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	TObjectPtr<UBloodforgedInputConfig> InputConfig;
+
+	UPROPERTY()
+	TObjectPtr<UBloodforgedAbilitySystComp> BloodforgedAbilitySystemComponent;
+
+	void AbilityInputTagPressed(FGameplayTag InputTag);
+	void AbilityInputTagReleased(FGameplayTag InputTag);
+	void AbilityInputTagHeld(FGameplayTag InputTag);
+
+public:
+	UBloodforgedAbilitySystComp* GetAbilitySystemComponent();
 };

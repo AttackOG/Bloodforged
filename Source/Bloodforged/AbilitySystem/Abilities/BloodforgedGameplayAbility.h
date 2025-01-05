@@ -13,5 +13,8 @@ UCLASS()
 class BLOODFORGED_API UBloodforgedGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
-	
+
+public:
+	UPROPERTY(EditDefaultsOnly, Category="Input")
+	FGameplayTag StartupInputTag;
 };

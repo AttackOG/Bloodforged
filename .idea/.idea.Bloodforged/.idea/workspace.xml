@@ -40,18 +40,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="cidr-memory-view://1" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/Unreal Projects/ActionRPG_UE53/Source/ActionRPG/Private/Items/RPGItem.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Documents/Unreal Projects/ActionRPG_UE53/Source/ActionRPG/Public/Items/RPGItem.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Programs/AutomationTool/Mutable/RunMutableCommandlet/obj/RunMutableCommandlet.Automation.csproj.nuget.g.props" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Templates/Tuple.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Aura/Source/Aura/Private/AbilitySystem/Abilities/AuraDamageGameplayAbility.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Aura/Source/Aura/Private/AbilitySystem/Abilities/AuraGameplayAbility.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Aura/Source/Aura/Private/AbilitySystem/AuraAttributeSet.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Aura/Source/Aura/Private/Actor/AuraEffectActor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Aura/Source/Aura/Public/Actor/AuraEffectActor.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Bloodforged/UHT/EffectActor.gen.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Game/BloodforgedGameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Game/BloodforgedGameModeBase.h" root0="FORCE_HIGHLIGHTING" />
@@ -78,7 +72,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "C/C++ Project.Bloodforged.executor": "Run",
+    "C/C++ Project.Bloodforged.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "ignore.virus.scanning.warn.message": "true",
@@ -235,7 +229,9 @@
       <workItem from="1735728630412" duration="15299000" />
       <workItem from="1735753015624" duration="6618000" />
       <workItem from="1735767412314" duration="1347000" />
-      <workItem from="1735839448119" duration="10180000" />
+      <workItem from="1735839448119" duration="10346000" />
+      <workItem from="1735925218702" duration="10772000" />
+      <workItem from="1735983795675" duration="9208000" />
     </task>
     <task id="LOCAL-00001" summary="Secondary attributes added.">
       <option name="closed" value="true" />

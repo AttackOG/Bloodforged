@@ -7,14 +7,20 @@
 #include "Bloodforged/Player/BloodforgedPlayerController.h"
 #include "Bloodforged/Player/BloodforgedPlayerState.h"
 #include "Bloodforged/UI/HUD/BloodforgedHUD.h"
-#include "Bloodforged/Weapons/Weapon.h"
-#include "Net/UnrealNetwork.h"
 
 void AHeroCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
+}
 
-	DOREPLIFETIME_CONDITION(AHeroCharacter, OverlappingWeapon, COND_OwnerOnly);
+void AHeroCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	//Init ability actor info for the server.
+	InitAbilityActorInfo();
+	AddCharacterAbilities();
 }
 
 void AHeroCharacter::InitAbilityActorInfo()
@@ -36,15 +42,6 @@ void AHeroCharacter::InitAbilityActorInfo()
 	InitializeDefaultAttributes();
 }
 
-void AHeroCharacter::PossessedBy(AController* NewController)
-{
-	Super::PossessedBy(NewController);
-
-	//Init ability actor info for the server.
-	InitAbilityActorInfo();
-	AddCharacterAbilities();
-}
-
 void AHeroCharacter::OnRep_PlayerState()
 {
 	Super::OnRep_PlayerState();
@@ -59,33 +56,4 @@ int32 AHeroCharacter::GetLevel()
 	check(BloodforgedPlayerState);
 	
 	return BloodforgedPlayerState->GetPlayerLevel();
-}
-
-void AHeroCharacter::SetOverlappingWeapon(AWeapon* Weapon)
-{
-	//This function is called on the server, don't need to show widget on server for anyone as only overlapping character should see it.
-	if (OverlappingWeapon)
-	{
-		OverlappingWeapon->ShowPickupWidget(false);
-	}
-	OverlappingWeapon = Weapon;
-	if (IsLocallyControlled())
-	{
-		if (OverlappingWeapon)
-		{
-			OverlappingWeapon->ShowPickupWidget(true);
-		}
-	}
-}
-
-void AHeroCharacter::OnRep_OverlappingWeapon(AWeapon* LastWeapon)
-{
-	if (OverlappingWeapon)
-	{
-		OverlappingWeapon->ShowPickupWidget(true);
-	}
-	if (LastWeapon)
-	{
-		LastWeapon->ShowPickupWidget(false);
-	}
 }

@@ -40,13 +40,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
-    <setting file="cidr-memory-view://1" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Programs/AutomationTool/Mutable/RunMutableCommandlet/obj/RunMutableCommandlet.Automation.csproj.nuget.g.props" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Templates/Tuple.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Private/UObject/Class.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/StaticMeshComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/Bloodforged/UHT/EffectActor.gen.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/GameplayTags/Classes/GameplayTagContainer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Net/Core/Classes/Net/Serialization/FastArraySerializer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Bloodforged/Module.Bloodforged.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Game/BloodforgedGameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Game/BloodforgedGameModeBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Interfaces/EnemyInterface.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -55,10 +57,24 @@
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/Player/BloodforgedPlayerState.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/UI/HUD/BloodforgedHUD.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Bloodforged/UI/HUD/BloodforgedHUD.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../GameplayAbilitySystem_Aura/Source/Aura/Public/Interaction/CombatInterface.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentDefinition.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentDefinition.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentInstance.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentInstance.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentManagerComponent.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentManagerComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryManagerComponent.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/LyraGame.Build.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Weapons/LyraRangedWeaponInstance.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Weapons/LyraWeaponInstance.cpp" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Weapons/LyraWeaponInstance.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -70,21 +86,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ Project.Bloodforged.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ Project.Bloodforged.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C/C++ Project.Bloodforged">
     <configuration name="Bloodforged" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -232,6 +248,27 @@
       <workItem from="1735839448119" duration="10346000" />
       <workItem from="1735925218702" duration="10772000" />
       <workItem from="1735983795675" duration="9208000" />
+      <workItem from="1736072517920" duration="12556000" />
+      <workItem from="1736273129494" duration="6411000" />
+      <workItem from="1736357127355" duration="1514000" />
+      <workItem from="1736447858199" duration="5588000" />
+      <workItem from="1736535692241" duration="4598000" />
+      <workItem from="1736589596159" duration="9162000" />
+      <workItem from="1736626859632" duration="5914000" />
+      <workItem from="1736688493618" duration="7956000" />
+      <workItem from="1736719557226" duration="7309000" />
+      <workItem from="1736878785517" duration="6855000" />
+      <workItem from="1736889726309" duration="2253000" />
+      <workItem from="1736894866624" duration="229000" />
+      <workItem from="1736965904709" duration="540000" />
+      <workItem from="1736966589598" duration="6436000" />
+      <workItem from="1737054153805" duration="3347000" />
+      <workItem from="1737060663627" duration="2138000" />
+      <workItem from="1737065830822" duration="719000" />
+      <workItem from="1737066648475" duration="808000" />
+      <workItem from="1737136507351" duration="13888000" />
+      <workItem from="1737200892341" duration="13076000" />
+      <workItem from="1737283082878" duration="7006000" />
     </task>
     <task id="LOCAL-00001" summary="Secondary attributes added.">
       <option name="closed" value="true" />
@@ -249,6 +286,9 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="dotnet:Microsoft.ApplicationInsights" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

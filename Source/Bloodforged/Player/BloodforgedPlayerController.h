@@ -7,6 +7,7 @@
 #include "GameFramework/PlayerController.h"
 #include "BloodforgedPlayerController.generated.h"
 
+class UInventoryManagerComponent;
 class UBloodforgedAbilitySystComp;
 class UBloodforgedInputConfig;
 class UInputAction;
@@ -25,12 +26,16 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
+	
 private:
 	/*
 	 * Input
 	 */
 	virtual void SetupInputComponent() override;
+
+	UPROPERTY(Replicated, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	TObjectPtr<UInventoryManagerComponent> InventoryManagerComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputAction> InputPickupAction;
@@ -46,7 +51,7 @@ private:
 	void AbilityInputTagPressed(FGameplayTag InputTag);
 	void AbilityInputTagReleased(FGameplayTag InputTag);
 	void AbilityInputTagHeld(FGameplayTag InputTag);
-
+	
 public:
 	UBloodforgedAbilitySystComp* GetAbilitySystemComponent();
 };

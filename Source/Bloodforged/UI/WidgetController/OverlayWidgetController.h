@@ -22,12 +22,27 @@ struct FUIWidgetRow : public FTableRowBase
 	TSubclassOf<class UBloodforgedUserWidget> MessageWidget;
 };
 
-class UBloodforgedUserWidget;
+USTRUCT(BlueprintType)
+struct FWeaponInfo : public FTableRowBase
+{
+	GENERATED_BODY()
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FGameplayTag Tag = FGameplayTag();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FText EquipmentName = FText();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSubclassOf<class UBloodforgedUserWidget> WidgetToShow;
+};
+
+class UBloodforgedUserWidget;
 struct FOnAttributeChangeData;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAttributeChangedSignature, float, NewValue);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FMessageWidgetRowSignature, FUIWidgetRow, Row);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FWeaponWidgetRowSignature, FUIWidgetRow, Row);
 
 /**
  * 

@@ -6,7 +6,6 @@
 #include "CharacterBase.h"
 #include "HeroCharacter.generated.h"
 
-class AWeapon;
 /**
  * 
  */
@@ -17,8 +16,6 @@ class BLOODFORGED_API AHeroCharacter : public ACharacterBase
 
 public:
 	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
-	
-	void SetOverlappingWeapon(AWeapon* Weapon);
 
 	virtual void PossessedBy(AController* NewController) override;
 	virtual void OnRep_PlayerState() override;
@@ -26,11 +23,5 @@ public:
 	virtual int32 GetLevel() override;
 	
 private:
-	UPROPERTY(ReplicatedUsing = OnRep_OverlappingWeapon)
-	TObjectPtr<AWeapon> OverlappingWeapon;
-
-	UFUNCTION()
-	void OnRep_OverlappingWeapon(AWeapon* LastWeapon);
-
 	virtual void InitAbilityActorInfo() override;
 };

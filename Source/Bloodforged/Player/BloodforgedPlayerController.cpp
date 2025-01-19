@@ -2,15 +2,24 @@
 
 
 #include "BloodforgedPlayerController.h"
-
 #include "AbilitySystemBlueprintLibrary.h"
 #include "Bloodforged/AbilitySystem/BloodforgedAbilitySystComp.h"
-#include "Bloodforged/AbilitySystem/BloodforgedAbilitySystemLibrary.h"
 #include "Bloodforged/Input/BloodforgedInputComponent.h"
+#include "Inventory/InventoryManagerComponent.h"
+#include "Net/UnrealNetwork.h"
 
 ABloodforgedPlayerController::ABloodforgedPlayerController()
 {
 	bReplicates = true;
+	InventoryManagerComponent = CreateDefaultSubobject<UInventoryManagerComponent>("Inventory");
+	InventoryManagerComponent->SetIsReplicated(true);
+}
+
+void ABloodforgedPlayerController::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ABloodforgedPlayerController, InventoryManagerComponent);
 }
 
 void ABloodforgedPlayerController::BeginPlay()
@@ -26,6 +35,7 @@ void ABloodforgedPlayerController::SetupInputComponent()
 	
 	BloodforgedEnhancedInput->BindAction(InputPickupAction, ETriggerEvent::Triggered, this, &ABloodforgedPlayerController::InputPickupPressed);
 	BloodforgedEnhancedInput->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
+	BloodforgedEnhancedInput->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
 }
 
 void ABloodforgedPlayerController::InputPickupPressed()
@@ -36,7 +46,6 @@ void ABloodforgedPlayerController::InputPickupPressed()
 void ABloodforgedPlayerController::AbilityInputTagPressed(const FGameplayTag InputTag)
 {
 	if (GetAbilitySystemComponent()) GetAbilitySystemComponent()->AbilityInputTagPressed(InputTag);
-	
 }
 
 void ABloodforgedPlayerController::AbilityInputTagReleased(const FGameplayTag InputTag)
@@ -47,7 +56,6 @@ void ABloodforgedPlayerController::AbilityInputTagReleased(const FGameplayTag In
 void ABloodforgedPlayerController::AbilityInputTagHeld(const FGameplayTag InputTag)
 {
 	if (GetAbilitySystemComponent()) GetAbilitySystemComponent()->AbilityInputTagHeld(InputTag);
-	
 }
 
 UBloodforgedAbilitySystComp* ABloodforgedPlayerController::GetAbilitySystemComponent()

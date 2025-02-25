@@ -15,8 +15,10 @@ void UBloodforgedProjectileSpell::ActivateAbility(const FGameplayAbilitySpecHand
 	if (!bIsServer) return;
 
 	ICombatInterface* CombatInterface = Cast<ICombatInterface>(GetAvatarActorFromActorInfo());
-	FTransform SpawnTransform;
-	SpawnTransform.SetLocation(CombatInterface->GetCombatSocketLocation());
-	
-	GetWorld()->SpawnActorDeferred<ABloodforgedProjectile>(ProjectileClass, SpawnTransform, GetOwningActorFromActorInfo(), Cast<APawn>(GetAvatarActorFromActorInfo()), ESpawnActorCollisionHandlingMethod::AlwaysSpawn);
+	if (CombatInterface)
+	{
+		
+		FTransform SpawnTransform;
+		GetWorld()->SpawnActorDeferred<ABloodforgedProjectile>(ProjectileClass, SpawnTransform, GetOwningActorFromActorInfo(), Cast<APawn>(GetAvatarActorFromActorInfo()), ESpawnActorCollisionHandlingMethod::AlwaysSpawn);
+	}
 }

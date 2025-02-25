@@ -59,6 +59,7 @@ public:
 	FGameplayTag InputTag_3;
 	FGameplayTag InputTag_4;
 	FGameplayTag InputTag_Sprint;
+	FGameplayTag InputTag_F;
 
 	// Weapons
 	FGameplayTag Weapon_Sword_BasicSword;

@@ -40,12 +40,22 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Developer/SessionFrontend/Private/Models/SessionBrowserTreeItems.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Programs/AutomationTool/Mutable/RunMutableCommandlet/obj/RunMutableCommandlet.Automation.csproj.nuget.g.props" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Private/Math/Sphere.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Templates/IsPODType.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Templates/Tuple.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Core/Public/Templates/UnrealTypeTraits.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Private/UObject/Class.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Public/Templates/SubclassOf.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/SkinnedMeshComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/StaticMeshComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/ProjectileMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Public/WorldPartition/RuntimeHashSet/StaticSpatialIndex.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/GameplayTags/Classes/GameplayTagContainer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../EpicGames/UE_5.5/Engine/Source/Runtime/Net/Core/Classes/Net/Serialization/FastArraySerializer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/x64/UnrealEditor/Development/Bloodforged/Module.Bloodforged.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -64,9 +74,11 @@
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentInstance.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentManagerComponent.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Equipment/LyraEquipmentManagerComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Interaction/IInteractableTarget.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/IPickupable.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryItemDefinition.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryItemDefinition.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryManagerComponent.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Inventory/LyraInventoryManagerComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/LyraGame.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Weapons/LyraRangedWeaponInstance.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../LyraStarterGame/Source/LyraGame/Weapons/LyraWeaponInstance.cpp" root0="SKIP_INSPECTION" />
@@ -269,6 +281,42 @@
       <workItem from="1737136507351" duration="13888000" />
       <workItem from="1737200892341" duration="13076000" />
       <workItem from="1737283082878" duration="7006000" />
+      <workItem from="1737314008708" duration="1093000" />
+      <workItem from="1737400714160" duration="3137000" />
+      <workItem from="1737485934672" duration="7392000" />
+      <workItem from="1737658826477" duration="2691000" />
+      <workItem from="1737665092557" duration="3944000" />
+      <workItem from="1737747633646" duration="1196000" />
+      <workItem from="1737797776287" duration="5485000" />
+      <workItem from="1737882003714" duration="12169000" />
+      <workItem from="1737912137285" duration="1485000" />
+      <workItem from="1738005767577" duration="4164000" />
+      <workItem from="1738090629243" duration="6436000" />
+      <workItem from="1738173739013" duration="9833000" />
+      <workItem from="1738260921791" duration="2487000" />
+      <workItem from="1738347978894" duration="5456000" />
+      <workItem from="1738420436208" duration="2679000" />
+      <workItem from="1738789020363" duration="1340000" />
+      <workItem from="1738868539919" duration="3437000" />
+      <workItem from="1738879674747" duration="861000" />
+      <workItem from="1738949553436" duration="2346000" />
+      <workItem from="1739018018978" duration="397000" />
+      <workItem from="1739018599163" duration="6684000" />
+      <workItem from="1739123123544" duration="840000" />
+      <workItem from="1739217053470" duration="3937000" />
+      <workItem from="1739475813323" duration="713000" />
+      <workItem from="1739625157123" duration="2207000" />
+      <workItem from="1739644881671" duration="1355000" />
+      <workItem from="1739710182786" duration="5383000" />
+      <workItem from="1739814407733" duration="8658000" />
+      <workItem from="1739903317159" duration="597000" />
+      <workItem from="1739906115944" duration="4873000" />
+      <workItem from="1740160068541" duration="5407000" />
+      <workItem from="1740224633996" duration="15310000" />
+      <workItem from="1740298980102" duration="21371000" />
+      <workItem from="1740422049539" duration="4660000" />
+      <workItem from="1740471630920" duration="7291000" />
+      <workItem from="1740514219162" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="Secondary attributes added.">
       <option name="closed" value="true" />

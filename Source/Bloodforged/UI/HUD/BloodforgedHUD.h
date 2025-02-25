@@ -7,6 +7,7 @@
 #include "GameFramework/HUD.h"
 #include "BloodforgedHUD.generated.h"
 
+class UInventoryMenuWidgetController;
 class UAttributeMenuWidgetController;
 struct FWidgetControllerParams;
 class UAbilitySystemComponent;
@@ -42,8 +43,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UAttributeMenuWidgetController> AttributeMenuWidgetControllerClass;
-
+	
 public:
 	UOverlayWidgetController* GetOverlayWidgetController(const FWidgetControllerParams& WidgetControllerParams);
 	UAttributeMenuWidgetController* GetAttributeMenuWidgetController(const FWidgetControllerParams& WidgetControllerParams);
+	
 };

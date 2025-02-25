@@ -5,6 +5,7 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "Bloodforged/AbilitySystem/BloodforgedAbilitySystComp.h"
 #include "Bloodforged/Input/BloodforgedInputComponent.h"
+#include "Characters/CharacterBase.h"
 #include "Inventory/InventoryManagerComponent.h"
 #include "Net/UnrealNetwork.h"
 
@@ -25,6 +26,8 @@ void ABloodforgedPlayerController::GetLifetimeReplicatedProps(TArray<class FLife
 void ABloodforgedPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PlayerCharacter = Cast<ACharacterBase>(GetPawn());
 }
 
 void ABloodforgedPlayerController::SetupInputComponent()
@@ -32,15 +35,23 @@ void ABloodforgedPlayerController::SetupInputComponent()
 	Super::SetupInputComponent();
 
 	UBloodforgedInputComponent* BloodforgedEnhancedInput = CastChecked<UBloodforgedInputComponent>(InputComponent);
-	
-	BloodforgedEnhancedInput->BindAction(InputPickupAction, ETriggerEvent::Triggered, this, &ABloodforgedPlayerController::InputPickupPressed);
+
 	BloodforgedEnhancedInput->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
 	BloodforgedEnhancedInput->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
+	BloodforgedEnhancedInput->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
+//	BloodforgedEnhancedInput->BindAction(InputPickupAction, ETriggerEvent::Triggered, this, &ThisClass::InputPickupPressed);
 }
 
 void ABloodforgedPlayerController::InputPickupPressed()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "Picked up");
+	if (PlayerCharacter)
+	{
+		PlayerCharacter->EquipButtonPressed();
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "PlayerCharacter is not valid in bloodforged player controller");
+	}
 }
 
 void ABloodforgedPlayerController::AbilityInputTagPressed(const FGameplayTag InputTag)
@@ -65,5 +76,10 @@ UBloodforgedAbilitySystComp* ABloodforgedPlayerController::GetAbilitySystemCompo
 		BloodforgedAbilitySystemComponent = Cast<UBloodforgedAbilitySystComp>(UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(GetPawn<APawn>()));
 	}
 	return BloodforgedAbilitySystemComponent;
+}
+
+UInventoryManagerComponent* ABloodforgedPlayerController::GetInventoryManager() const
+{
+	return InventoryManagerComponent;
 }
 

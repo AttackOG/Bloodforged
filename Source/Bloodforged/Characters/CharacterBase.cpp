@@ -2,14 +2,28 @@
 
 
 #include "CharacterBase.h"
-
+#include "Net/UnrealNetwork.h"
+#include"Interactables/InteractableItemsBase.h"
 #include "AbilitySystemComponent.h"
 #include "Bloodforged/AbilitySystem/BloodforgedAbilitySystComp.h"
+#include "Components/CombatComponent.h"
 
 ACharacterBase::ACharacterBase()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
+	CombatComponent = CreateDefaultSubobject<UCombatComponent>("CombatComponent");
+	CombatComponent->SetIsReplicated(true);
+
+	/*WeaponStaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("WeaponStaticMesh");
+	WeaponStaticMesh->SetupAttachment(GetMesh());*/
+}
+
+void ACharacterBase::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME_CONDITION(ACharacterBase, OverlappingItem, COND_OwnerOnly);
 }
 
 void ACharacterBase::InitAbilityActorInfo()
@@ -40,7 +54,29 @@ void ACharacterBase::AddCharacterAbilities() const
 	if (!HasAuthority()) return;
 
 	BloodforgedAbilitySystemComponent->GiveStartupAbilities(StartupAbilities);
-	
+}
+
+void ACharacterBase::EquipButtonPressed()
+{
+	if (CombatComponent)
+	{
+		if (HasAuthority())
+		{
+			CombatComponent->EquipItem(OverlappingItem);
+		}
+		else
+		{
+			ServerEquipButtonPressed();
+		}
+	}
+}
+
+void ACharacterBase::ServerEquipButtonPressed_Implementation()
+{
+	if (CombatComponent)
+	{
+		CombatComponent->EquipItem(OverlappingItem);
+	}
 }
 
 UAbilitySystemComponent* ACharacterBase::GetAbilitySystemComponent() const
@@ -48,3 +84,35 @@ UAbilitySystemComponent* ACharacterBase::GetAbilitySystemComponent() const
 	return AbilitySystemComponent;
 }
 
+void ACharacterBase::SetOverlappingItem(AInteractableItemsBase* Item)
+{
+	if (OverlappingItem)
+	{
+		OverlappingItem->ShowPickupWidget(false);
+	}
+	OverlappingItem = Item;
+	if (IsLocallyControlled())
+	{
+		if (OverlappingItem)
+		{
+			OverlappingItem->ShowPickupWidget(true);
+		}
+	}
+}
+
+bool ACharacterBase::IsWeaponEquipped()
+{
+	return (CombatComponent && CombatComponent->EquippedItem);
+}
+
+void ACharacterBase::OnRep_InteractableItem(AInteractableItemsBase* LastItem)
+{
+	if (OverlappingItem)
+	{
+		OverlappingItem->ShowPickupWidget(true);
+	}
+	if (LastItem)
+	{
+		LastItem->ShowPickupWidget(false);
+	}
+}

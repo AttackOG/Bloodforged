@@ -53,6 +53,7 @@ void FBloodforgedGameplayTags::InitializeNativeGameplayTags()
 	GameplayTags.InputTag_3 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.3"), FString("Input tag for 3 key."));
 	GameplayTags.InputTag_4 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.4"), FString("Input tag for 4 key."));
 	GameplayTags.InputTag_Sprint = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.Sprint"), FString("Input tag for sprinting."));
+	GameplayTags.InputTag_F = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.F"), FString("Input tag for picking things up."));
 
 	// Vital Tags
 	GameplayTags.Weapon_Sword_BasicSword = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Weapon.Sword.BasicSword"), FString("Basic sword gameplay tag."));
